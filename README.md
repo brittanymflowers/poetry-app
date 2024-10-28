@@ -11,7 +11,7 @@ Poetry App is a web application designed to showcase and explore various poetry.
 
 ## Hosted Online
 
-You can access the app hosted online at https://poetry.netlify.app/
+You can access the app hosted online at https://poetryfinder.netlify.app/
 
 ## Development server
 
