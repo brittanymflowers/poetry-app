@@ -1,0 +1,22 @@
+<div>{{ "Search By " + searchType }}</div>
+<form>
+  <mat-form-field class="form">
+    <span matPrefix></span>
+    <input
+      type="search"
+      matInput
+      [placeholder]="searchType"
+      name="search"
+      [(ngModel)]="searchTerm"
+    />
+    <button
+      matSuffix
+      mat-button
+      (click)="searchPoems(searchType, searchTerm)"
+      class="button"
+      aria-label="search-button"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</form>
