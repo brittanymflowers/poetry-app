@@ -1,0 +1,31 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="Title">
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <td mat-cell *matCellDef="let poem">{{ poem.title }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Author">
+      <th mat-header-cell *matHeaderCellDef>Author</th>
+      <td mat-cell *matCellDef="let poem">{{ poem.author }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="LineCount">
+      <th mat-header-cell *matHeaderCellDef>Line Count</th>
+      <td mat-cell *matCellDef="let poem">{{ poem.linecount }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr
+      mat-row
+      *matRowDef="let poem; columns: columnsToDisplay"
+      (click)="handleClick(poem)"
+    ></tr>
+  </table>
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    showFirstLastButtons
+    aria-label="Select page of poems"
+  >
+  </mat-paginator>
+</div>
