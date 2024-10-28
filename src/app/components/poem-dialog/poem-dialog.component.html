@@ -1,0 +1,12 @@
+<mat-dialog-content class="mat-typography">
+  <h6 class="title">{{ poem.title }}</h6>
+  <div class="author">
+    {{ "by " + poem.author }}
+  </div>
+  <div *ngFor="let line of poem.lines">
+    {{ line }}
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
